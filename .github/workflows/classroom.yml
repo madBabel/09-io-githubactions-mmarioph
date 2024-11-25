@@ -2,13 +2,14 @@ name: Autograding Workflow for Inputs and Outputs
 
 on:
   workflow_dispatch:
+  repository_dispatch:
 
 jobs:
   autograde:
     runs-on: ubuntu-latest
 
     steps:
-    # 1. Checkout the repository
+    # 1. Checkout the repository 
     - name: Checkout code
       uses: actions/checkout@v3
 
